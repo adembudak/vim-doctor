@@ -74,7 +74,7 @@ command set that’s still valuable today.
 
 #### Vim Forks and Neovim
 
-[Neovim](https://neovim.io/) is a fork of Vim and defines itself extension of Vim with the goal make easy for contribution.
+[Neovim](https://neovim.io/) is a fork of Vim and defines itself as an extension of Vim with the goal that make easy to contribute. Neovim can be used as a drop-in replacement of Vim.
 
 ### Creating a file 
 
@@ -343,9 +343,9 @@ c3w      or 3cw, cw cw cw
 
 Recording more than 1 move would be greatly useful. Vim has 26 register(a-z), which can be considered
 26 different clipboard!!! 
-1. start recording with q and choose a register to record on. Ex: qa
+1. start recording with `q` and choose a register to record on. Ex: qa
 2. exit from recording with Esc.
-3. apply what you record qith @<reg> Ex: @a<enter>
+3. apply what you record with `@<reg>` Ex: @a<enter>
         
 ```
 q[a-z]   start recording
@@ -712,7 +712,7 @@ That's all :)) Try with `:Greet` on command mode.
 * Modern Vim - Drew Neil
 * Learning Vi and Vim Editors - Arnold Robbins, Elbert Hannah
 * The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts - Benjamin Klein
-* Mastering Vim: Build a software development environment with Vim and Neovim<sup>1</sup> - Ruslan Osipov
+* Mastering Vim: Build a software development environment with Vim and Neovim<sup>2</sup> - Ruslan Osipov
 * [A Byte of Vim](https://vim.swaroopch.com/) (Online Book)
 
 #### cheatsheets
