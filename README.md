@@ -89,7 +89,7 @@ $ vim directory/filename
 Vim provides different modes to users for focus on content.
 
 * normal mode: vim starts with this mode. Esc is used for enter this mode. `:h Normal-mode`
-* insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) :h Insert-mod`
+* insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) `:h Insert-mod`
 * replace mode: used for replace existing text by directly typing over it. `:h  Replace-mode`
 * visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v
 * command mode: From the normal mode, can be entered by : and used for enter command. Example: `:h ctrl-r <enter>`
@@ -98,7 +98,9 @@ Vim provides different modes to users for focus on content.
 
 ```
 $ vimtutor          Official tutorial of Vim
+
 :h user-manual
+:h help-summary     On usage of build-in documantation
 :h subject          help about the *subject*. Ex: `:h python` (Ctrl-] to click hyperlinks, and Ctrl-T to back)
 
 :q                  quit
@@ -127,8 +129,6 @@ yy               yank all line
 p                paste to below of cursor
 P                Paste to above of the cursor
 c                change, change the selected area
-"<reg>y          copy selected area to regıster (a-z den register) 
-"<reg>p          paste to register (a-z register) 
 .                repeat latest command
 ```
 
@@ -176,7 +176,7 @@ C-d      jump half screen size down
 ```
 
 ```
-`:h scroll-cursor`
+:h scroll-cursor
 
 z<enter> redraw, cursor on the top of window, and put cursor at first non-blank in the line
 zt       like above but leave the cursor in the same column
@@ -340,6 +340,7 @@ c3w      or 3cw, cw cw cw
 2dd      delete 2 lines
 ```
 #### repating more than one command by recording
+`:h recording`
 
 Recording more than 1 move would be greatly useful. Vim has 26 register(a-z), which can be considered
 26 different clipboard!!! 
@@ -387,6 +388,7 @@ g;       jump back to last editted position
 
 #### find and change
 
+`:h substitute`
 ```
 :s/old/new      change first 'old' with 'new' on the current line
 :s/old/new/g    change all 'old' with 'new' on the current line
@@ -487,7 +489,7 @@ To make no-recursing mapping we add *nore*
 
 - for normal mode **nnoremap**
 - for insert mode **inoremap**
-- for visual mode **vnoremap**
+- for visual mode **xnoremap**
 
 The mapping below does what we expect, from normal mode, goes 4 lines below and enter insert mode:
 
