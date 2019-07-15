@@ -158,7 +158,7 @@ $        end of line
 
 ```
 w        jump to first character of next word
-e        jump to last character of the currect word
+e        jump to last character of the current word
 b        jump to first character of the current word
 ```
 
