@@ -424,7 +424,7 @@ dotfiles in public repos.
  `.bashrc`, `.profile`, `.vimrc` are examples of dotfiles.
 
 .vimrc file defines setting of Vim at runtime. There are a system .vimrc and user .vimrc in *home* directory of every user. The one on home directory override system .vimrc. 
-If you don't have .vimrc file on your home, you can create by vim .vimrc. Look: [default .vimrc içeriği](https://gist.github.com/anonymous/c966c0757f62b451bffa):link:
+If you don't have .vimrc file on your home directory, you can download from [here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim).
 
 #### mapping 
 
