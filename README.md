@@ -100,7 +100,7 @@ $ vimtutor          Official tutorial of Vim
 
 :h user-manual
 :h help-summary     On usage of build-in documantation
-:h subject          help about the *subject*. Ex: `:h python` (Ctrl-] to click hyperlinks, and Ctrl-T to back)
+:h subject          help about the *subject*. Ex: `:h python` (C-] to click hyperlinks, C-T to back)
 
 :q                  quit
 :w                  write
@@ -197,10 +197,9 @@ G        bottom of the file
 +        begining of the next line
 -        beginning of the previous line
 ```
- 
-```                                                                                         v            v
-W        jump beginning of the next word (punctuation not considered words) Example:  e (abcd)    E (abcd)
-E        jump end of the next word (punctuation not considerd as words) 
+``` 
+W        jump beginning of the next word (punctuation not considered words)        v           v 
+E        jump end of the next word (punctuation not considerd as words) Ex:  e (abcd)   E (abcd)
 B        jump begining of the previous word
 #G       go to line number #  Ex: 38G
 #gg      same as #G
@@ -295,12 +294,13 @@ C-wL       move current window to the far right
 ```
 
 ```
-$ vim -O2 f1.txt f2.txt   open Vim with `-O[N]` paramater, (N=2 here), vertically splitted f1.txt and f.txt  (more parameters `vim --help`)
+$vim --help               for list Vim paramaters
+
+$ vim -O2 f1.txt f2.txt   open Vim with `-O[N]` paramater, vertically splitted f1.txt and f.txt 
 $ vim -o2 f1.txt f2.txt   like above but horizontally splitted
 $ vim -P2 f1.txt f2.txt   like above but on tab pages
 
-$ vim f1.txt f2.txt f3.txt          open the files at one but show only one at a time (:next to next file and  :prev)
-
+$ vim f1.txt f2.txt       open the files but show only one at a time (navigate with :next and :prev)
 ```
 #### using tab pages
 
