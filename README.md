@@ -89,9 +89,9 @@ Vim provides different modes to users for focus on content.
 
 * normal mode: vim starts with this mode. Esc is used for enter this mode. `:h Normal-mode`:tropical_fish:
 * insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) `:h Insert-mode`:tropical_fish:
-* replace mode: used for replace existing text by directly typing over it. `:h  Replace-mode`:tropical_fish:
+* replace mode: used for replace existing text by directly typing over it, can be entered by `R` `:h  Replace-mode`:tropical_fish:
 * visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v `:h Visual-mode`:tropical_fish:
-* command mode: From the normal mode, can be entered by `:` and used for enter command. Example: `:h ctrl-r <enter>`
+* command mode: used for enter Ex commands, can be entered by `:` and require to press enter key. Example: `:w <enter>` `:h Cmdline-mode`:tropical_fish:
 
 ### General
 
@@ -471,9 +471,8 @@ Sometimes mappings conflict other mappings, so that defining your mappings as no
 The example below demostrates such a case, the _o_ goes one line below and enter insert mode. The expected 4 lines 
 below and enter insert mode behaviour, end up with endless loop. The _o_ will call _4o_ and it will call another _4o_ etc.
 
-```
-nmap o 4o 
-```
+`nmap o 4o`
+
 To make no-recursing mapping we add *nore*
 
 - for normal mode **nnoremap**
@@ -482,9 +481,7 @@ To make no-recursing mapping we add *nore*
 
 The mapping below does what we expect, from normal mode, goes 4 lines below and enter insert mode:
 
-```
-nnoremap o 4o
-```
+`nnoremap o 4o`
 
 we can specify mappings to filetypes:
 
