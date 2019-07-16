@@ -38,9 +38,7 @@
 ### [Quit the Vim](https://stackoverflow.blog/wp-content/uploads/2017/05/country_stuck_vim-1-2-1024x1024.png)
 
 
-```
-<esc> :q! <enter> 
-```
+`<esc> :q! <enter>`  
 
 ### What is Vim?
 
@@ -68,7 +66,7 @@ common. ex added a feature that turned the terminal screen into an interactive w
 that showed the contents of a file. Now it was possible to see changes as they were
 made in real time. The screen-editing mode was activated by entering the `:visual` command, or just `:vi` for short. And that is where the name vi comes from.
 Vim stands for vi improved. That’s an understatement—I can’t stand to use regular
-vi! Look up :h vi-differences for a list of Vim features that are unavailable in vi. Vim’s
+vi! Look up `:h vi-differences` for a list of Vim features that are unavailable in vi. Vim’s
 enhancements are essential, but it still owes much to its heritage. The constraints
 that guided the design of Vim’s ancestors have endowed us with a highly efficient
 command set that’s still valuable today.
@@ -79,7 +77,7 @@ command set that’s still valuable today.
 
 ### Creating a file 
 
-```
+```sh
 $ vim <enter>
 $ vim filename
 $ vim directory/filename
@@ -89,11 +87,11 @@ $ vim directory/filename
 
 Vim provides different modes to users for focus on content.
 
-* normal mode: vim starts with this mode. Esc is used for enter this mode. `:h Normal-mode`
-* insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) `:h Insert-mod`
-* replace mode: used for replace existing text by directly typing over it. `:h  Replace-mode`
-* visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v
-* command mode: From the normal mode, can be entered by : and used for enter command. Example: `:h ctrl-r <enter>`
+* normal mode: vim starts with this mode. Esc is used for enter this mode. `:h Normal-mode`:tropical_fish:
+* insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) `:h Insert-mode`:tropical_fish:
+* replace mode: used for replace existing text by directly typing over it. `:h  Replace-mode`:tropical_fish:
+* visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v `:h Visual-mode`:tropical_fish:
+* command mode: From the normal mode, can be entered by `:` and used for enter command. Example: `:h ctrl-r <enter>`
 
 ### General
 
@@ -134,7 +132,6 @@ c                change, change the selected area
 ```
 
 ```
-
 :term    start a terminal session inside vim, more at `:h terminal`
 :!<cmd>   execute <cmd> commands without leaving Vim Ex: `!g++ -wall -std=c++14 main.cpp`, `!ruby %`
 :sh      go to shell, return by `exit`
@@ -143,8 +140,8 @@ C-z      send vim to background, return by fg
 
 ### Moving around
 
+`:h motion` :tropical_fish:  
 ```
-:h motion
                                 k
 h        cursor left            ^
 j        cursor down       h <     > l
@@ -176,9 +173,9 @@ C-u      jump half screen size up
 C-d      jump half screen size down
 ```
 
-```
-:h scroll-cursor
+`:h scroll-cursor` :tropical_fish:  
 
+```
 z<enter> redraw, cursor on the top of window, and put cursor at first non-blank in the line
 zt       like above but leave the cursor in the same column
 
@@ -262,9 +259,8 @@ S-r      enters [replace mode](#replace-mode), change text in place
 ```
 
 ### Working more than one file
-```
-:h usr_08.txt
-```
+
+`:h usr_08.txt`:tropical_fish:  
 
 ```
 C-ws       split current window horizontally (alternative :split)
@@ -290,8 +286,8 @@ C-w#<      resize current window to the left # of times (default 1)
 C-w#>      resize current window to the right # of times (default 1)
 :res #     resize horizontally splitted window # of times
 ```
+`:h window-moving`:tropical_fish:
 ```
-:h window-moving
 C-wH       move current window to the far left
 C-wJ       move current window to the very bottom
 C-wK       move current window to the very top
@@ -340,8 +336,10 @@ c3w      or 3cw, cw cw cw
 2w       w w,  go to the begining of 2 next words
 2dd      delete 2 lines
 ```
+
 #### repating more than one command by recording
-`:h recording`
+
+`:h recording`:tropical_fish:  
 
 Recording more than 1 move would be greatly useful. Vim has 26 register(a-z), which can be considered
 26 different clipboard!!! 
@@ -389,7 +387,7 @@ g;       jump back to last editted position
 
 #### find and change
 
-`:h substitute`
+`:h substitute`:tropical_fish:  
 ```
 :s/old/new      change first 'old' with 'new' on the current line
 :s/old/new/g    change all 'old' with 'new' on the current line
@@ -414,10 +412,9 @@ dgg     delete from current line to beginning of the file
 ### Configure 
 
 #### dotfiles and .vimrc 
-```
-:h vimrc-intro
-:options
-```
+
+`:h vimrc-intro`:tropical_fish:  
+`:options`:tropical_fish:  
 
 On Unix-like operating systems, most of system tools are C programs and some of these programs take arguments written in a file. Dotfiles, files with starts with ., gives these paramaters and 
 define program behaviour on runtime. You can read interesting story of born this trend from [here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp).
@@ -427,14 +424,12 @@ dotfiles in public repos.
  `.bashrc`, `.profile`, `.vimrc` are examples of dotfiles.
 
 .vimrc file defines setting of Vim at runtime. There are a system .vimrc and user .vimrc in *home* directory of every user. The one on home directory override system .vimrc. 
-If you don't have .vimrc file on your home, you can create by vim .vimrc. Look: [default .vimrc içeriği](https://gist.github.com/anonymous/c966c0757f62b451bffa)
+If you don't have .vimrc file on your home, you can create by vim .vimrc. Look: [default .vimrc içeriği](https://gist.github.com/anonymous/c966c0757f62b451bffa):link:
 
 #### mapping 
 
-```
-:h mapping
-```
-we can create shortcuts using mapping.
+`:h mapping`:tropical_fish:  
+we can create shortcuts using mapping.  
 
 General formula:
 
@@ -448,12 +443,12 @@ we need to add mappings to .vimrc make them permanent.
 - to work in insert mode **imap**
 - to work in visual mode **xmap**
 
-
 ```
 nmap m <C-d>        "in normal mode: when typed m, ctrl-d (half page below) will be executed
 imap jk <ESC>       "in inesert mode, when typed jk, pass to normal modee
 ```
 Some special characters:
+`:h key-notation`:tropical_fish:   
 
 | Karakter | Anlamı |
 |:---------|-------:|
@@ -469,14 +464,7 @@ Some special characters:
 | `<Del>` | Delete
 | `<S-p>` | Shift + p |
 
-```
-:h key-notation
-```
-
-To check whether your mapping conflict other mappings:
-```
-:verbose map shortcut 
-```
+To check whether your mapping conflict other mappings: `:verbose map shortcut`
 
 Sometimes mappings conflict other mappings, so that defining your mappings as no-recursive is a good practice.
 
@@ -508,25 +496,13 @@ autocmd FileType text nnoremap <C-s> :w <cr>
 
 ##### leader variable
 
-`:h leader`
+`:h leader`:tropical_fish:
 
-You can choose a variable as a _leader_ and you can use it in mapping prefix.
+You can choose a variable as a _leader_ and use it as a mapping prefix.  
+`let mapleader = "-"`  now I chose `-` character as a _leader_.  
+After `nnoremap <leader>ve :vsplit $MYVIMRC<cr>` mapping, when I want to edit the .vimrc, in normal mod, can press `-ve` characters.  
 
-```
-let mapleader = "-"
-```
-I chose `-` character as a _leader_.
- 
-```
-nnoremap <leader>ve :vsplit $MYVIMRC<cr>
-```
-Now when I want to edit the .vimrc, in normal mod, I can press `-ve` characters.
-
-
-To see all the mappings:
-```
-:map
-```
+See all the mappings with `:map`  
 
 #### Adding plugin
 
@@ -581,7 +557,7 @@ and then invoke
 command, that's it!
 
 #### Creating your own plugin
-`:h plugin`
+`:h plugin`:tropical_fish:   
 
 You can write your own plugin! A Vim plugin is a program written in vimscript (VimL) language. Generally consist of
 following parts.
@@ -598,15 +574,11 @@ MyAwesomePlugin/
 └── after     
 └── indent    
 └── compiler   
-
 ```
 
 ##### Hello World plugin
-Add the folder contain the plugin to `runtimepath`:
+Add the folder contain the plugin to `runtimepath`: `set runtimepath+=/path/to/helloworld`  
 
-```
-set runtimepath+=/path/to/helloworld
-```
 ```
 helloworld/
 .
@@ -616,7 +588,7 @@ helloworld/
     └── greet.vim
 ```
 
-```VimScript
+```vims
 " plugin/greet.vim
 if exists('g:loaded_greet')
 	finish
@@ -625,7 +597,7 @@ let g:loaded_greet = 1
 
 command! Greet call greet#hello_world()
 ```
-```VimScript
+```vims
 " autoload/greet.vim
 function! greet#hello_world() abort
 	echo "Hello World!!"
@@ -737,23 +709,16 @@ that not enabled by default. To enable them you might need to build Vim from its
 
 Which features enabled by default is changing distro to distro, check out with:
 
-```
-:version
-```
+`:version`  
 
-Download repo with Git:
+Download repo with Git:  
 
-```
-$ git clone --depth=1 https://github.com/vim/vim.git
-```
-```
-$ cd vim
-```
-before start building, we need to do *configure*, this is the phrase you'll choose which features to enable.
+`$ git clone --depth=1 https://github.com/vim/vim.git && cd vim`  
 
-```
-./configure --help
-```
+before start building, we need to do *configure*, this is the phrase you'll choose which features to enable.  
+
+`$ ./configure --help`  
+
 These are the paramaters I use:
 ```
 $ sudo ./configure --enable-fail-if-missing \
@@ -786,16 +751,14 @@ $ sudo ./configure --enable-fail-if-missing \
 ![version](media/version.png)
 
  yours might be different according to your need and be ready to search and install third-party libraries. After this step, the files build system need are generated,
-with GNU make build tool:
-```
-$ sudo make -j 8
-```
-The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
-At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need superuser permissions):
+with GNU make build tool:  
 
-```
-$ sudo make install
-```
+`$ sudo make -j 8`  
+
+The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
+At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need superuser permissions):  
+
+`$ sudo make install`  
 
 Don't delete the repo yet, in order to apply patches or experiment with the latest features by `git pull`ing them. The subsequent build will be a lot faster, because *make* compiles only changed files.
 
