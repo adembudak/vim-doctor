@@ -37,6 +37,7 @@
 
 ### [Quit the Vim](https://stackoverflow.blog/wp-content/uploads/2017/05/country_stuck_vim-1-2-1024x1024.png)
 
+
 ```
 <esc> :q! <enter> 
 ```
@@ -225,7 +226,7 @@ In more general<sup>2<sup>:
                  G
 ```
 
-### Entering insert mode ##
+### Entering insert mode
 
 ```
                            /~~~~~~~~~~~~\
@@ -250,8 +251,8 @@ i        insert text before cursor
 I        insert text to start of the line
 a        append after cursor
 A        append text to end of line
-o        make newline below to current line and add text
-O        make newline above to current line and add text
+o        make newline below to current line and insert text
+O        make newline above to current line and insert text
 s        delete character under cursor and enter insert mode
 S        delete all line and enter insert mode
 cc       same as above
@@ -431,7 +432,7 @@ If you don't have .vimrc file on your home, you can create by vim .vimrc. Look: 
 #### mapping 
 
 ```
-:help mapping
+:h mapping
 ```
 we can create shortcuts using mapping.
 
@@ -506,6 +507,9 @@ autocmd FileType text nnoremap <C-s> :w <cr>
 ```
 
 ##### leader variable
+
+`:h leader`
+
 You can choose a variable as a _leader_ and you can use it in mapping prefix.
 
 ```
@@ -787,7 +791,7 @@ with GNU make build tool:
 $ sudo make -j 8
 ```
 The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
-At the end of this process, an executables will be created. To make them available as system command we need to copy them to appropriate directories (you need superuser permissions):
+At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need superuser permissions):
 
 ```
 $ sudo make install
