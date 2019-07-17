@@ -13,7 +13,7 @@
 - [Moving around](#moving-around)
 - [Entering insert mode](#entering-insert-mode)
 - [Working more than one file](#working-more-than-one-file)
-  * [using tabs](#using-tabs)
+  * [using tab pages](#using-tab-pages)
 - [Repeating commands without repeating yourself](#repeating-commands-without-repeating-yourself)
   * [repating more than one command by recording](#repating-more-than-one-command-by-recording)
 - [Editing](#editing)
@@ -28,6 +28,7 @@
   * [Creating your own plugin](#creating-your-own-plugin)
     + [Hello World plugin](#hello-world-plugin)
   * [An incomplete list of plugins](#an-incomplete-list-of-plugins)
+  * [Vim for programmers](#vim-for-programmers)
 - [Links](#links)
   * [sites](#sites)
   * [books](#books)
@@ -36,7 +37,6 @@
 
 
 ### [Quit the Vim](https://stackoverflow.blog/wp-content/uploads/2017/05/country_stuck_vim-1-2-1024x1024.png)
-
 
 `<esc> :q! <enter>`  
 
@@ -140,7 +140,7 @@ C-z      send vim to background, return by fg
 
 ### Moving around
 
-`:h motion` :tropical_fish:  
+`:h motion`:tropical_fish:  
 ```
                                 k
 h        cursor left            ^
@@ -173,7 +173,7 @@ C-u      jump half screen size up
 C-d      jump half screen size down
 ```
 
-`:h scroll-cursor` :tropical_fish:  
+`:h scroll-cursor`:tropical_fish:  
 
 ```
 z<enter> redraw, cursor on the top of window, and put cursor at first non-blank in the line
@@ -294,7 +294,7 @@ C-wL       move current window to the far right
 ```
 
 ```
-$vim --help               for list Vim paramaters
+$vim --help               for list Vim paramaters `h vim-arguments`:tropical_fish:
 
 $ vim -O2 f1.txt f2.txt   open Vim with `-O[N]` paramater, vertically splitted f1.txt and f.txt 
 $ vim -o2 f1.txt f2.txt   like above but horizontally splitted
@@ -303,6 +303,8 @@ $ vim -P2 f1.txt f2.txt   like above but on tab pages
 $ vim f1.txt f2.txt       open the files but show only one at a time (navigate with :next and :prev)
 ```
 #### using tab pages
+
+`:h tabpage`:tropical_fish:
 
 ```
 :tabedit filename   edit specified file in a new tab
@@ -506,7 +508,7 @@ See all the mappings with `:map`
 The easiest way to adding plugin to Vim is make use of a plugin manager. There are several of them:
 
 - [Pathogen](https://github.com/tpope/vim-pathogen)
-- [Vim8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages)
+- [Vim8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages) `:h packages`:tropical_fish:
 - [NeoBundle](https://github.com/Shougo/neobundle.vim)
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - [dein.vim](https://github.com/Shougo/dein.vim)
@@ -551,9 +553,10 @@ and then invoke
 
 `:PlugInstall`
 
-command, that's it!
+command, that's it! After add the plugin, the usual step is reading its documentation to learn and make some more configuration.
 
 #### Creating your own plugin
+`:h write-plugin`:tropical_fish:   
 `:h plugin`:tropical_fish:   
 
 You can write your own plugin! A Vim plugin is a program written in vimscript (VimL) language. Generally consist of
@@ -603,6 +606,16 @@ endfunction
 
 That's all :)) Try with `:Greet` on command mode.
 
+#### Vim for programmers
+Vim is a great tool for programmers. There are several plugins for autocompletion, refactoring, linting, code-formating and lots of others.
+Writing such plugins are non-trivial job, porting them to other editors is almost impossible. People come up different approaches so far, some of them is pretty successful.
+
+In 2016 Microsoft developed [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop reinventing the wheel, and regulating such operations. Unless you have a good reason
+ to not using it, *LSP* is the way to go for make Vim to gain IDE like features.
+To use it, you need to install *language server* implementation for the language you programming in to your machine and add *language client* plugin to Vim.
+
+I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language server, and [coc.nvim](https://github.com/neoclide/coc.nvim) as a client for programming C++. See the list of language servers and clients lists from [here](https://langserver.org).
+
 #### An incomplete list of plugins
 
 ###### For newcomers
@@ -621,8 +634,8 @@ That's all :)) Try with `:Greet` on command mode.
 * [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
 
 
-###### List of language servers
-* [Language Servers](https://langserver.org/)
+###### List of language servers 
+* [Language Servers](https://langserver.org/):fire:
 
 ###### Lint and syntax check
 * [syntastic](https://github.com/vim-syntastic/syntastic)
@@ -651,7 +664,7 @@ That's all :)) Try with `:Greet` on command mode.
 
 ###### Theme and colors
 * [vimcolors.com](https://vimcolors.com/)
-* [rainglow.io](https://rainglow.io)
+* [rainglow.io](https://github.com/rainglow/vim)
 * [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 * [vim-devicons](https://github.com/ryanoasis/vim-devicons)
 * [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
@@ -683,11 +696,11 @@ That's all :)) Try with `:Greet` on command mode.
 
 #### books
 
-* Practical Vim: Edit Text at the Speed of Though<sup>1</sup> - Drew Neil
-* Modern Vim - Drew Neil
-* Learning Vi and Vim Editors - Arnold Robbins, Elbert Hannah
-* The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts - Benjamin Klein
-* Mastering Vim: Build a software development environment with Vim and Neovim<sup>2</sup> - Ruslan Osipov
+* Practical Vim: Edit Text at the Speed of Though<sup>1</sup> by Drew Neil
+* Modern Vim by Drew Neil
+* Learning Vi and Vim Editors by Arnold Robbins, Elbert Hannah
+* The VimL Primer: Edit Like a Pro with Vim Plugins and Scripts by Benjamin Klein
+* Mastering Vim: Build a software development environment with Vim and Neovim<sup>2</sup> by Ruslan Osipov
 * [A Byte of Vim](https://vim.swaroopch.com/) (Online Book)
 
 #### cheatsheets
