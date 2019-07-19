@@ -27,8 +27,8 @@
     + [adding plugin with vim-plug](#adding-plugin-with-vim-plug)
   * [Creating your own plugin](#creating-your-own-plugin)
     + [Hello World plugin](#hello-world-plugin)
-  * [An incomplete list of plugins](#an-incomplete-list-of-plugins)
   * [Vim for programmers](#vim-for-programmers)
+  * [An incomplete list of plugins](#an-incomplete-list-of-plugins)
 - [Links](#links)
   * [sites](#sites)
   * [books](#books)
@@ -135,7 +135,7 @@ c                change, change the selected area
 :term    start a terminal session inside vim, more at `:h terminal`
 :!<cmd>   execute <cmd> commands without leaving Vim Ex: `!g++ -wall -std=c++14 main.cpp`, `!ruby %`
 :sh      go to shell, return by `exit`
-C-z      send vim to background, return by fg
+$C-z      send vim to background, return by $fg
 ```
 
 ### Moving around
@@ -535,7 +535,7 @@ call plug#end()
 Add the plugin you want to install between `call plug#begin()` and `call plug#end()` commands. Most of vim plugins
 host and maintain on Github.
 
-For example, to add plugin on the link https://github.com/tpope/vim-sensible you should put:
+For example, to add plugin on the link https://github.com/tpope/vim-sensible, you should put:
 
 ```vims
 call plug#begin()
@@ -604,15 +604,15 @@ function! greet#hello_world() abort
 endfunction
 ```
 
-That's all :)) Try with `:Greet` on command mode.
+That's all:smiley: Try with `:Greet` on command mode.
 
 #### Vim for programmers
 Vim is a great tool for programmers. There are several plugins for autocompletion, refactoring, linting, code-formating and lots of others.
-Writing such plugins are non-trivial job, porting them to other editors is almost impossible. People come up different approaches so far, some of them is pretty successful.
+Writing such plugins are non-trivial job, porting them to other editors is almost impossible. People come up different approaches so far, some of them are pretty successful.
 
 In 2016 Microsoft developed [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop reinventing the wheel, and regulating such operations. Unless you have a good reason
  to not using it, *LSP* is the way to go for make Vim to gain IDE like features.
-To use it, you need to install *language server* implementation for the language you programming in to your machine and add *language client* plugin to Vim.
+To use it, you need to install *language server* implementation for the language you programming in and add *language client* plugin to Vim.
 
 I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language server, and [coc.nvim](https://github.com/neoclide/coc.nvim) as a client for programming C++. See the list of language servers and clients lists from [here](https://langserver.org).
 
