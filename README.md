@@ -44,7 +44,7 @@
 
 Vim is a highly configurable text editor for fast and effective text editing.
 
-Vim is not designed for hold users hand, it's a tools and must be learned how to use. Vim is not a word
+Vim is not designed for hold users hand, it's a tool and must be learned how to use. Vim is not a word
 processor.
 
 #### History of Vim<sup>1</sup>
@@ -418,7 +418,7 @@ dgg     delete from current line to beginning of the file
 `:h vimrc-intro`:tropical_fish:  
 `:options`:tropical_fish:  
 
-On Unix-like operating systems, most of system tools are C programs and some of these programs take arguments written in a file. Dotfiles, files with starts with ., gives these paramaters and 
+On Unix-like operating systems, most of system tools are C programs and some of these programs take arguments written in a file. Dotfiles, files with starts with a '.', gives these paramaters and 
 define program behaviour on runtime. You can read interesting story of born this trend from [here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp).
 Dotfiles are specially useful when you set up a new machine, it make you avoid to configure all the things from beginning. Keeping dotfiles in a version control system is a good practice, most of users share their 
 dotfiles in public repos.
@@ -680,6 +680,10 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [NrrwRgn](https://github.com/chrisbra/NrrwRgn)
 * [vim-obsession](https://github.com/tpope/vim-obsession)
 * [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
+* [lite-dfm](https://github.com/bilalq/lite-dfm)
+* [goyo.vim](https://github.com/junegunn/goyo.vim) focus on content
+* [limelight.vim](https://github.com/junegunn/limelight.vim) partially highlight 
+
 
 ### Links
 
