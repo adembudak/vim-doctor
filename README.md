@@ -668,6 +668,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 * [vim-devicons](https://github.com/ryanoasis/vim-devicons)
 * [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+* [ProgrammingFonts](https://github.com/ProgrammingFonts/ProgrammingFonts)
 
 ###### Plugings for better user experience
 * [Surround](https://github.com/tpope/vim-surround)
