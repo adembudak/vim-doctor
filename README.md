@@ -657,6 +657,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 
 ###### GUI-like
 * [NERDTree](https://github.com/scrooloose/nerdtree)
+* [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [promptline](https://github.com/edkolev/promptline.vim)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [powerline](https://github.com/powerline/powerline)
@@ -667,7 +668,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [rainglow.io](https://github.com/rainglow/vim)
 * [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 * [vim-devicons](https://github.com/ryanoasis/vim-devicons)
-* [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+* [nerd-fonts](https://github.com/ryanoasis/nerd-fonts):fire:
 * [ProgrammingFonts](https://github.com/ProgrammingFonts/ProgrammingFonts)
 
 ###### Plugings for better user experience
