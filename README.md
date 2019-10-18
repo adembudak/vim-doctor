@@ -671,7 +671,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [nerd-fonts](https://github.com/ryanoasis/nerd-fonts):fire:
 * [ProgrammingFonts](https://github.com/ProgrammingFonts/ProgrammingFonts)
 
-###### Plugings for better user experience
+###### Plugins for better user experience
 * [Surround](https://github.com/tpope/vim-surround)
 * [Fugitive](https://github.com/tpope/vim-fugitive)
 * [vim-commentary](https://github.com/tpope/vim-commentary)
@@ -685,6 +685,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [lite-dfm](https://github.com/bilalq/lite-dfm)
 * [goyo.vim](https://github.com/junegunn/goyo.vim) focus on content
 * [limelight.vim](https://github.com/junegunn/limelight.vim) partially highlight 
+* [command-t](https://github.com/wincent/command-t) fast nagivating 
 
 
 ### Links
