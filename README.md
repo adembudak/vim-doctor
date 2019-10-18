@@ -271,7 +271,7 @@ C-ww       jump to next window
 C-w h      jump from current window to window on the left
 C-w j      jump from current window to window on below
 C-w k      jump from current window to window on above
-C-w l      jump from current window to window on left
+C-w l      jump from current window to window on the right
 C-w t      jump to top most left window
 C-w b      jump to bottom most right window
 ```
