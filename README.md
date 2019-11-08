@@ -717,6 +717,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * https://wiki.archlinux.org/index.php/Vim
 * http://www.fprintf.net/vimCheatSheet.html
 * https://devhints.io/vimscript
+* http://jonas.nitro.dk/git/quick-reference.html
 
 
 ### Building Vim from source code
