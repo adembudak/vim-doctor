@@ -700,6 +700,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [vimawesome.com](https://www.vimawesome.com) Vim plugins
 * [dotfiles.github.io](https://dotfiles.github.io)
 * [yet another dotfile manager](https://yadm.io)
+* [r/vim subreddit](https://www.reddit.com/r/vim)
 
 #### books
 
@@ -717,8 +718,6 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * https://wiki.archlinux.org/index.php/Vim
 * http://www.fprintf.net/vimCheatSheet.html
 * https://devhints.io/vimscript
-* http://jonas.nitro.dk/git/quick-reference.html
-
 
 ### Building Vim from source code
 
