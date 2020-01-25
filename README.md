@@ -33,6 +33,7 @@
   * [sites](#sites)
   * [books](#books)
   * [cheatsheets](#cheatsheets)
+  * [video series](#video-series)
 - [Building Vim from source code](#building-vim-from-source-code)
 
 
@@ -718,6 +719,11 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * https://wiki.archlinux.org/index.php/Vim
 * http://www.fprintf.net/vimCheatSheet.html
 * https://devhints.io/vimscript
+
+#### video series
+* [Vim Tutorials by Derek Wyatt](https://vimeo.com/6999927)
+* [Vim ScreenCasts by Greg Hurrell](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA/featured)
+* [Vimcasts](http://vimcasts.org/)
 
 ### Building Vim from source code
 
