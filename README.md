@@ -419,20 +419,21 @@ dgg     delete from current line to beginning of the file
 `:h vimrc-intro`:tropical_fish:  
 `:options`:tropical_fish:  
 
-On Unix-like operating systems, most of system tools are C programs and some of these programs take arguments written in a file. Dotfiles, files with starts with a '.', gives these paramaters and 
-define program behaviour on runtime. You can read interesting story of born this trend from [here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp).
-Dotfiles are specially useful when you set up a new machine, it make you avoid to configure all the things from beginning. Keeping dotfiles in a version control system is a good practice, most of users share their 
-dotfiles in public repos.
+On Unix-like operating systems, most of system tools are C programs and some of these programs take their arguments written in a file. Dotfiles, files with starts with a '.', gives these paramaters and 
+defines program behaviour on runtime. You can read from [here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp) interesting story of this trend.
+Dotfiles are specially useful when you set up a new machine, it make you avoid to configure all the things from beginning. Keeping dotfiles in a version control system is a good practice, so you can 
+try new settings, revert back, host them in a Git server (like Github).
 
  `.bashrc`, `.profile`, `.vimrc` are examples of dotfiles.
 
 .vimrc file defines setting of Vim at runtime. There are a system .vimrc and user .vimrc in *home* directory of every user. The one on home directory override system .vimrc. 
-If you don't have .vimrc file on your home directory, you can download from [here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim).
+If you don't have .vimrc file on your home directory, you can download from [here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim) and save it either: 
+`~/.vimrc` or `~/.vim/vimrc`.
 
 #### mapping 
 
 `:h mapping`:tropical_fish:  
-we can create shortcuts using mapping.  
+we are shortcuts in Vim terminology.
 
 General formula:
 
@@ -453,7 +454,7 @@ imap jk <ESC>       "in inesert mode, when typed jk, pass to normal modee
 Some special characters:
 `:h key-notation`:tropical_fish:   
 
-| Karakter | Anlamı |
+| Character | Meaning |
 |:---------|-------:|
 | `<Esc>` | Esc(ape) |
 | `<CR>`  | Enter |
@@ -469,24 +470,13 @@ Some special characters:
 
 To check whether your mapping conflict other mappings: `:verbose map shortcut`
 
-Sometimes mappings conflict other mappings, so that defining your mappings as no-recursive is a good practice.
-
-The example below demostrates such a case, the _o_ goes one line below and enter insert mode. The expected 4 lines 
-below and enter insert mode behaviour, end up with endless loop. The _o_ will call _4o_ and it will call another _4o_ etc.
-
-`nmap o 4o`
-
-To make no-recursing mapping we add *nore*
+It's a good paractices to define mappings as non-recursive. To make no-recursing mapping we add *nore*  
 
 - for normal mode **nnoremap**
 - for insert mode **inoremap**
 - for visual mode **xnoremap**
 
-The mapping below does what we expect, from normal mode, goes 4 lines below and enter insert mode:
-
-`nnoremap o 4o`
-
-we can specify mappings to filetypes:
+we can also specify mappings to a filetype:
 
 ```
 autocmd FileType cpp nnoremap <f5> :w <bar> !clang++ -stdlib=libc++ -fsyntax-only -std=c++1z % <cr>
@@ -519,7 +509,7 @@ The easiest way to adding plugin to Vim is make use of a plugin manager. There a
 
 ##### adding plugin with vim-plug
 
-vim-plug is a plugin manager for Vim which allows you to add, update, remove plugins.
+vim-plug is a plugin manager for Vim and allows add, update, remove plugins.
 
 run the follong command:
 ```bash
@@ -727,10 +717,10 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 
 ### Building Vim from source code
 
-If you're using an Unix based operating system, Vi or Vim is probably preinstalled but Vim needs to some features
-that not enabled by default. To enable them you might need to build Vim from its source code.
+If you're using an Unix based operating system, Vi or Vim is probably preinstalled. But You might need some of the 
+features that not that not enabled by default. To enable them you might need to build Vim from its source code.
 
-Which features enabled by default is changing distro to distro, check out with:
+Which features enabled by default is changing by distro, check out with:
 
 `:version`  
 
@@ -738,7 +728,7 @@ Download repo with Git:
 
 `$ git clone --depth=1 https://github.com/vim/vim.git && cd vim`  
 
-before start building, we need to do *configure*, this is the phrase you'll choose which features to enable.  
+ *configure* step is the phrase you'll choose which features to enable:  
 
 `$ ./configure --help`  
 
@@ -779,7 +769,7 @@ with GNU make build tool:
 `$ sudo make -j 8`  
 
 The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
-At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need superuser permissions):  
+At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need super-user permissions):  
 
 `$ sudo make install`  
 
