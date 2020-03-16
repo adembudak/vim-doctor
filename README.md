@@ -2,6 +2,7 @@
 
  <p align="center"> Yet another quick reference for Vim text editor </p>
 		 
+<div id="contents"></div>
 
 - [Quit the Vim](#quit-the-vim)
 - [What is Vim?](#what-is-vim)
@@ -83,6 +84,7 @@ $ vim <enter>
 $ vim filename
 $ vim directory/filename
 ```
+<sub>[⇧ back to top](#contents)</sub>
 
 ### Vim modes
 
@@ -93,6 +95,8 @@ Vim provides different modes to users for focus on content.
 * replace mode: used for replace existing text by directly typing over it, can be entered by `R` `:h  Replace-mode`:tropical_fish:
 * visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v `:h Visual-mode`:tropical_fish:
 * command mode: used for enter Ex commands, can be entered by `:` and require to press enter key. Example: `:w <enter>` `:h Cmdline-mode`:tropical_fish:
+
+<sub>[⇧ back to top](#contents)</sub>
 
 ### General
 
@@ -139,6 +143,7 @@ c                change, change the selected area
 $C-z      send vim to background, return by $fg
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ### Moving around
 
 `:h motion`:tropical_fish:  
@@ -175,7 +180,7 @@ C-d      jump half screen size down
 ```
 
 `:h scroll-cursor`:tropical_fish:  
-
+<sub>[⇧ back to top](#contents)</sub>
 ```
 z<enter> redraw, cursor on the top of window, and put cursor at first non-blank in the line
 zt       like above but leave the cursor in the same column
@@ -223,6 +228,7 @@ In more general<sup>2<sup>:
                  G
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ### Entering insert mode
 
 ```
@@ -257,6 +263,7 @@ cw       change from cursor position to start of the next word
 
 S-r      enters [replace mode](#replace-mode), change text in place 
 ```
+<sub>[⇧ back to top](#contents)</sub>
 
 ### Working more than one file
 
@@ -286,6 +293,8 @@ C-w#<      resize current window to the left # of times (default 1)
 C-w#>      resize current window to the right # of times (default 1)
 :res #     resize horizontally splitted window # of times
 ```
+<sub>[⇧ back to top](#contents)</sub>
+
 `:h window-moving`:tropical_fish:
 ```
 C-wH       move current window to the far left
@@ -303,6 +312,7 @@ $ vim -P2 f1.txt f2.txt   like above but on tab pages
 
 $ vim f1.txt f2.txt       open the files but show only one at a time (navigate with :next and :prev)
 ```
+<sub>[⇧ back to top](#contents)</sub>
 #### using tab pages
 
 `:h tabpage`:tropical_fish:
@@ -328,6 +338,7 @@ $ vim f1.txt f2.txt       open the files but show only one at a time (navigate w
 ```
 :tabs         list tabs
 ```
+<sub>[⇧ back to top](#contents)</sub>
 
 ### Repeating commands without repeating yourself
 
@@ -340,6 +351,7 @@ c3w      or 3cw, cw cw cw
 2dd      delete 2 lines
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 #### repating more than one command by recording
 
 `:h recording`:tropical_fish:  
@@ -355,6 +367,7 @@ q[a-z]   start recording
 @[a-z]   apply record
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ### Editing
 
 ```
@@ -388,6 +401,7 @@ g;       jump back to last editted position
 :g/^$/d  delete all the empty lines
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 #### find and change
 
 `:h substitute`:tropical_fish:  
@@ -401,6 +415,7 @@ g;       jump back to last editted position
 :%s/old/new/gc    change all 'old' with 'new' on the current file but before ask for permission
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ### Some frequently used commands
 
 ```
@@ -411,6 +426,7 @@ ea      add end of the word
 xp      exchange two chacter  Ex: sometihng -> something
 dgg     delete from current line to beginning of the file
 ```
+<sub>[⇧ back to top](#contents)</sub>
 
 ### Configure 
 
@@ -430,6 +446,7 @@ try new settings, revert back, host them in a Git server (like Github).
 If you don't have .vimrc file on your home directory, you can download from [here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim) and save it either: 
 `~/.vimrc` or `~/.vim/vimrc`.
 
+<sub>[⇧ back to top](#contents)</sub>
 #### mapping 
 
 `:h mapping`:tropical_fish:  
@@ -484,6 +501,7 @@ autocmd FileType d nnoremap <f8> :call DTest()<cr>
 autocmd FileType text nnoremap <C-s> :w <cr>
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ##### leader variable
 
 `:h leader`:tropical_fish:
@@ -493,7 +511,7 @@ You can choose a variable as a _leader_ and use it as a mapping prefix.
 After `nnoremap <leader>ve :vsplit $MYVIMRC<cr>` mapping, when I want to edit the .vimrc, in normal mod, can press `-ve` characters.  
 
 See all the mappings with `:map`  
-
+<sub>[⇧ back to top](#contents)</sub>
 #### Adding plugin
 
 The easiest way to adding plugin to Vim is make use of a plugin manager. There are several of them:
@@ -507,6 +525,7 @@ The easiest way to adding plugin to Vim is make use of a plugin manager. There a
 - [VAM](https://github.com/MarcWeber/vim-addon-manager)
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
 
+<sub>[⇧ back to top](#contents)</sub>
 ##### adding plugin with vim-plug
 
 vim-plug is a plugin manager for Vim and allows add, update, remove plugins.
@@ -546,6 +565,7 @@ and then invoke
 
 command, that's it! After add the plugin, the usual step is reading its documentation to learn and make some more configuration.
 
+<sub>[⇧ back to top](#contents)</sub>
 #### Creating your own plugin
 `:h write-plugin`:tropical_fish:   
 `:h plugin`:tropical_fish:   
@@ -567,6 +587,7 @@ MyAwesomePlugin/
 └── compiler   
 ```
 
+<sub>[⇧ back to top](#contents)</sub>
 ##### Hello World plugin
 Add the folder contain the plugin to `runtimepath`: `set runtimepath+=/path/to/helloworld`  
 
@@ -597,6 +618,7 @@ endfunction
 
 That's all:smiley: Try with `:Greet` on command mode.
 
+<sub>[⇧ back to top](#contents)</sub>
 #### Vim for programmers
 Vim is a great tool for programmers. There are several plugins for autocompletion, refactoring, linting, code-formating and lots of others.
 Writing such plugins are non-trivial job, porting them to other editors is almost impossible. People come up different approaches so far, some of them are pretty successful.
@@ -625,6 +647,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
 
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### List of language servers 
 * [Language Servers](https://langserver.org/):fire:
 
@@ -633,6 +656,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [ALE](https://github.com/w0rp/ale)
 * [neomake](https://github.com/neomake/neomake)
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### Snippet
 * [Snimate](https://github.com/garbas/vim-snipmate)
 * [ultisnips](https://github.com/SirVer/ultisnips)
@@ -640,12 +664,14 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [neosnippet.vim](https://github.com/Shougo/neosnippet.vim)
 * [vim-minisnip](https://github.com/joereynolds/vim-minisnip)
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### Programming language
 * [vim-polyglot](https://github.com/sheerun/vim-polyglot)
 * [vim-go](https://github.com/fatih/vim-go)
 * [rust.vim](https://github.com/rust-lang/rust.vim)
 * [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### GUI-like
 * [NERDTree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
@@ -654,6 +680,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [powerline](https://github.com/powerline/powerline)
 * [lightline](https://github.com/itchyny/lightline.vim)
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### Theme and colors
 * [vimcolors.com](https://vimcolors.com/)
 * [rainglow.io](https://github.com/rainglow/vim)
@@ -662,6 +689,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [nerd-fonts](https://github.com/ryanoasis/nerd-fonts):fire:
 * [ProgrammingFonts](https://github.com/ProgrammingFonts/ProgrammingFonts)
 
+<sub>[⇧ back to top](#contents)</sub>
 ###### Plugins for better user experience
 * [Surround](https://github.com/tpope/vim-surround)
 * [Fugitive](https://github.com/tpope/vim-fugitive)
@@ -678,6 +706,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [limelight.vim](https://github.com/junegunn/limelight.vim) partially highlight 
 * [command-t](https://github.com/wincent/command-t) fast nagivating 
 
+<sub>[⇧ back to top](#contents)</sub>
 
 ### Links
 
@@ -693,6 +722,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [yet another dotfile manager](https://yadm.io)
 * [r/vim subreddit](https://www.reddit.com/r/vim)
 
+<sub>[⇧ back to top](#contents)</sub>
 #### books
 
 * Practical Vim: Edit Text at the Speed of Though<sup>1</sup> by Drew Neil
@@ -702,6 +732,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * Mastering Vim: Build a software development environment with Vim and Neovim<sup>2</sup> by Ruslan Osipov
 * [A Byte of Vim](https://vim.swaroopch.com/) (Online Book)
 
+<sub>[⇧ back to top](#contents)</sub>
 #### cheatsheets
 
 * http://www.worldtimzone.com/res/vi.html
@@ -710,18 +741,19 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * http://www.fprintf.net/vimCheatSheet.html
 * https://devhints.io/vimscript
 
+<sub>[⇧ back to top](#contents)</sub>
 #### video series
 * [Vim Tutorials by Derek Wyatt](https://vimeo.com/6999927)
 * [Vim ScreenCasts by Greg Hurrell](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA/featured)
 * [Vimcasts](http://vimcasts.org/)
 
+<sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
 
 If you're using an Unix based operating system, Vi or Vim is probably preinstalled. But You might need some of the 
-features that not that not enabled by default. To enable them you might need to build Vim from its source code.
+features that not enabled by default. To enable them, you might need to build Vim from its source code.
 
 Which features enabled by default is changing by distro, check out with:
-
 `:version`  
 
 Download repo with Git:  
@@ -734,7 +766,7 @@ Download repo with Git:
 
 These are the paramaters I use:
 ```
-$ sudo ./configure --enable-fail-if-missing \
+$ ./configure --enable-fail-if-missing \
 --disable-darwin \
 --disable-smack \
 --disable-selinux \
@@ -760,13 +792,14 @@ $ sudo ./configure --enable-fail-if-missing \
 --disable-gtktest \
 --with-compiledby=p1v0t
 ```
-
+<sub>[⇧ back to top](#contents)</sub>
+### Building Vim from source code
 ![version](media/version.png)
 
  yours might be different according to your need and be ready to search and install third-party libraries. After this step, the files build system need are generated,
 with GNU make build tool:  
 
-`$ sudo make -j 8`  
+`$ make -j 8`  
 
 The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
 At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need super-user permissions):  
@@ -781,7 +814,7 @@ Don't delete the repo yet, in order to apply patches or experiment with the late
 - Do you want to add or edit something, is something important missing? Fork the repo and send a [pull request](https://help.github.com/en/articles/creating-a-pull-request)
 - Follow me on Twitter (before twitter marks me as a bot) [@adembubudak](https://twitter.com/adembudak_)
 
-[Top](README.md#top)
+<sub>[⇧Top](#contents)</sub>
 
 ### Licence 
 
