@@ -721,6 +721,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [dotfiles.github.io](https://dotfiles.github.io)
 * [yet another dotfile manager](https://yadm.io)
 * [r/vim subreddit](https://www.reddit.com/r/vim)
+* [vim.help](https://vim.help/)
 
 <sub>[⇧ back to top](#contents)</sub>
 #### books
@@ -746,6 +747,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [Vim Tutorials by Derek Wyatt](https://vimeo.com/6999927)
 * [Vim ScreenCasts by Greg Hurrell](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA/featured)
 * [Vimcasts](http://vimcasts.org/)
+* [Advanced Vim Workflows](https://www.youtube.com/watch?v=futay9NjOac)
 
 <sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
