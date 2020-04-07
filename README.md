@@ -748,6 +748,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [Vim ScreenCasts by Greg Hurrell](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA/featured)
 * [Vimcasts](http://vimcasts.org/)
 * [Advanced Vim Workflows](https://www.youtube.com/watch?v=futay9NjOac)
+* [The Vim Tutorial by DistroTube](https://www.youtube.com/watch?v=ER5JYFKkYDg)
 
 <sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
@@ -758,24 +759,25 @@ features that not enabled by default. To enable them, you might need to build Vi
 Which features enabled by default is changing by distro, check out with:
 `:version`  
 
-Download repo with Git:  
+Get the vim source from [releases page](https://github.com/vim/vim/releases) or fetch repo with Git:  
 
 `$ git clone --depth=1 https://github.com/vim/vim.git && cd vim`  
 
- *configure* step is the phrase you'll choose which features to enable:  
+1.  *configure* step is the phrase you'll choose which features to enable:  
 
 `$ ./configure --help`  
 
 These are the paramaters I use:
 ```
-$ ./configure --enable-fail-if-missing \
+./configure --prefix=/home/adem/.config/vim
+--enable-fail-if-missing  \
 --disable-darwin \
 --disable-smack \
---disable-selinux \
---enable-luainterp=yes \
---with-python3-command=python3interp \
+--disable-selinux \ 
+--enable-pythoninterp=yes \
+--with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \
 --enable-python3interp=yes \
---with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
+--with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu/ \
 --enable-cscope \
 --disable-netbeans \
 --enable-terminal \
@@ -783,38 +785,38 @@ $ ./configure --enable-fail-if-missing \
 --enable-multibyte \
 --disable-rightleft \
 --disable-arabic \
---disable-farsi \
 --enable-fontset \
 --enable-gui=no \
 --enable-gtk2-check=no \
 --enable-gtk3-check=no \
 --enable-athena-check=no \
+--enable-motif-check=no \
 --enable-nextaw-check=no \
 --enable-carbon-check=no \
 --disable-gtktest \
+--enable-nextaw-check=no \
 --with-compiledby=p1v0t
 ```
-<sub>[⇧ back to top](#contents)</sub>
-### Building Vim from source code
+which looks like:
 ![version](media/version.png)
+Yours might be different according to your need and be ready to search and install third-party libraries. 
 
- yours might be different according to your need and be ready to search and install third-party libraries. After this step, the files build system need are generated,
-with GNU make build tool:  
+2- After this step, the files build system need are generated, with GNU make build tool:  
 
 `$ make -j 8`  
 
 The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
-At the end of this process, executables will be created. To make them available as system command, we need to copy them to appropriate directories (you need super-user permissions):  
 
-`$ sudo make install`  
+3- At the end of this process, executables will be created. To make them available as command, we need to copy generated binaries and other files.
 
-Don't delete the repo yet, in order to apply patches or experiment with the latest features by `git pull`ing them. The subsequent build will be a lot faster, because *make* compiles only changed files.
+`$ make install`  
+
+This will install files to the `prefix` specified on *configure* step.
 
 -----
 
+- Do you want to add or edit something, is something important missing? Please let me know and I'll fix it or [pull your requests](https://help.github.com/en/articles/creating-a-pull-request)
 - Did you like this document, please leave it a star.
-- Do you want to add or edit something, is something important missing? Fork the repo and send a [pull request](https://help.github.com/en/articles/creating-a-pull-request)
-- Follow me on Twitter (before twitter marks me as a bot) [@adembubudak](https://twitter.com/adembudak_)
 
 <sub>[⇧Top](#contents)</sub>
 
