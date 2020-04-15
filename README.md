@@ -638,6 +638,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [coc.nvim](https://github.com/neoclide/coc.nvim)
 * [LanguageCliient-neovim](https://github.com/autozimu/LanguageClient-neovim)
 * [vim-lsc](https://github.com/natebosch/vim-lsc)
+* [neovim language client](https://neovim.io/doc/user/lsp.html)
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 * [deoplete.vim](https://github.com/Shougo/deoplete.nvim)
 * [Neocomplete](https://github.com/Shougo/neocomplete.vim)
