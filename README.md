@@ -750,6 +750,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [Vimcasts](http://vimcasts.org/)
 * [Advanced Vim Workflows](https://www.youtube.com/watch?v=futay9NjOac)
 * [The Vim Tutorial by DistroTube](https://www.youtube.com/watch?v=ER5JYFKkYDg)
+* [Vim Un-Alphabet by Josh Branchaud](https://www.youtube.com/watch?v=7LDlUMMbv6k&list=PL46-cKSxMYYCMpzXo6p0Cof8hJInYgohU)
 
 <sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
