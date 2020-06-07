@@ -752,6 +752,7 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 * [The Vim Tutorial by DistroTube](https://www.youtube.com/watch?v=ER5JYFKkYDg)
 * [Vim Un-Alphabet by Josh Branchaud](https://www.youtube.com/watch?v=7LDlUMMbv6k&list=PL46-cKSxMYYCMpzXo6p0Cof8hJInYgohU)
 * [Vim Training Classes by Shawn Biddle](https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PL39697668A5E07C69)
+* [Editors: Vim (./missing semester by M.I.T)](https://missing.csail.mit.edu/2020/editors/)
 
 <sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
