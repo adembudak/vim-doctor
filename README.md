@@ -51,31 +51,34 @@ processor.
 
 #### History of Vim<sup>1</sup>
 
-*ed* was the original Unix text editor. It was written at a time when video displays were
-uncommon. Source code was usually printed onto a roll of paper and edited on a
-teletype terminal.
- Commands entered at the terminal would be sent to a mainframe
-computer for processing, and the output from each command would be printed. In
-those days, the connection between a terminal and a mainframe was slow, so much
-so that a quick typist could outpace the network, entering commands faster than
-they could be sent for processing. In this context, it was vital that ed provide a terse
-syntax. Consider how p prints the current line, while %p prints the entire file.
-ed went through several generations of improvements, including em (dubbed the
-*“editor for mortals”*), en, and eventually *ex*.
+*ed* was the original Unix text editor. It was written at a time when video
+displays were uncommon. Source code was usually printed onto a roll of paper
+and edited on a teletype terminal.  Commands entered at the terminal would be
+sent to a mainframe computer for processing, and the output from each command
+would be printed. In those days, the connection between a terminal and
+a mainframe was slow, so much so that a quick typist could outpace the network,
+entering commands faster than they could be sent for processing. In this
+context, it was vital that ed provide a terse syntax. Consider how p prints the
+current line, while %p prints the entire file.  ed went through several
+generations of improvements, including em (dubbed the *“editor for mortals”*),
+en, and eventually *ex*.
 
- By this time, video displays were more
-common. ex added a feature that turned the terminal screen into an interactive window
-that showed the contents of a file. Now it was possible to see changes as they were
-made in real time. The screen-editing mode was activated by entering the `:visual` command, or just `:vi` for short. And that is where the name vi comes from.
-Vim stands for vi improved. That’s an understatement—I can’t stand to use regular
-vi! Look up `:h vi-differences` for a list of Vim features that are unavailable in vi. Vim’s
-enhancements are essential, but it still owes much to its heritage. The constraints
-that guided the design of Vim’s ancestors have endowed us with a highly efficient
-command set that’s still valuable today.
+ By this time, video displays were more common. ex added a feature that turned
+the terminal screen into an interactive window that showed the contents of
+a file. Now it was possible to see changes as they were made in real time. The
+screen-editing mode was activated by entering the `:visual` command, or just
+`:vi` for short. And that is where the name vi comes from.  Vim stands for vi
+improved. That’s an understatement—I can’t stand to use regular vi! Look up `:h
+vi-differences` for a list of Vim features that are unavailable in vi. Vim’s
+enhancements are essential, but it still owes much to its heritage. The
+constraints that guided the design of Vim’s ancestors have endowed us with
+a highly efficient command set that’s still valuable today.
 
 #### Vim Forks and Neovim
 
-[Neovim](https://neovim.io/) is a fork of Vim and defines itself as an extension of Vim with the goal that make easy to contribute. Neovim can be used as a drop-in replacement of Vim.
+[Neovim](https://neovim.io/) is a fork of Vim and defines itself as an
+extension of Vim with the goal that make easy to contribute. Neovim can be used
+as a drop-in replacement of Vim.
 
 ### Creating a file 
 
@@ -90,11 +93,17 @@ $ vim directory/filename
 
 Vim provides different modes to users for focus on content.
 
-* normal mode: vim starts with this mode. Esc is used for enter this mode. `:h Normal-mode`:tropical_fish:
-* insert mode: used for add text to editor, can be entered by one of [insert commands](#entering-insert-mode) `:h Insert-mode`:tropical_fish:
-* replace mode: used for replace existing text by directly typing over it, can be entered by `R` `:h  Replace-mode`:tropical_fish:
-* visual mode: used for select an area on text. Character-wise selection can be made by v, line-wise selection can be made by V, and block-wise with C-v `:h Visual-mode`:tropical_fish:
-* command mode: used for enter Ex commands, can be entered by `:` and require to press enter key. Example: `:w <enter>` `:h Cmdline-mode`:tropical_fish:
+* normal mode: vim starts with this mode. Esc is used for enter this mode. `:h
+  Normal-mode`:tropical_fish:
+* insert mode: used for add text to editor, can be entered by one of [insert
+  commands](#entering-insert-mode) `:h Insert-mode`:tropical_fish:
+* replace mode: used for replace existing text by directly typing over it, can
+  be entered by `R` `:h  Replace-mode`:tropical_fish:
+* visual mode: used for select an area on text. Character-wise selection can be
+  made by v, line-wise selection can be made by V, and block-wise with C-v `:h
+Visual-mode`:tropical_fish:
+* command mode: used for enter Ex commands, can be entered by `:` and require
+  to press enter key. Example: `:w <enter>` `:h Cmdline-mode`:tropical_fish:
 
 <sub>[⇧ back to top](#contents)</sub>
 
@@ -356,7 +365,8 @@ c3w      or 3cw, cw cw cw
 
 `:h recording`:tropical_fish:  
 
-Recording more than 1 move would be greatly useful. Vim has 26 register(a-z), which can be considered
+Recording more than 1 move would be greatly useful. Vim has 26 register(a-z),
+which can be considered
 26 different clipboard!!! 
 1. start recording with `q` and choose a register to record on. Ex: qa
 2. exit from recording with Esc.
@@ -435,15 +445,26 @@ dgg     delete from current line to beginning of the file
 `:h vimrc-intro`:tropical_fish:  
 `:options`:tropical_fish:  
 
-On Unix-like operating systems, most of system tools are C programs and some of these programs take their arguments written in a file. Dotfiles, files with starts with a '.', gives these paramaters and 
-defines program behaviour on runtime. You can read from [here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp) interesting story of this trend.
-Dotfiles are specially useful when you set up a new machine, it make you avoid to configure all the things from beginning. Keeping dotfiles in a version control system is a good practice, so you can 
-try new settings, revert back, host them in a Git server (like Github).
+On Unix-like operating systems, most of system tools are C programs and some of
+these programs take their arguments written in a file. Dotfiles, files with
+starts with a '.', gives these paramaters and defines program behaviour on
+runtime. You can read from
+[here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp)
+interesting story of this trend.
+
+Dotfiles are specially useful when you set up a new machine, it make you avoid
+to configure all the things from beginning. Keeping dotfiles in a version
+control system is a good practice, so you can try new settings, revert back,
+host them in a Git server (like Github).
 
  `.bashrc`, `.profile`, `.vimrc` are examples of dotfiles.
 
-.vimrc file defines setting of Vim at runtime. There are a system .vimrc and user .vimrc in *home* directory of every user. The one on home directory override system .vimrc. 
-If you don't have .vimrc file on your home directory, you can download from [here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim) and save it either: 
+.vimrc file defines setting of Vim at runtime. There are a system .vimrc and
+user .vimrc in *home* directory of every user. The one on home directory
+override system .vimrc.  If you don't have .vimrc file on your home directory,
+you can download from
+[here](https://raw.githubusercontent.com/vim/vim/master/runtime/defaults.vim)
+and save it either:
 `~/.vimrc` or `~/.vim/vimrc`.
 
 <sub>[⇧ back to top](#contents)</sub>
@@ -508,7 +529,8 @@ autocmd FileType text nnoremap <C-s> :w <cr>
 
 You can choose a variable as a _leader_ and use it as a mapping prefix.  
 `let mapleader = "-"`  now I chose `-` character as a _leader_.  
-After `nnoremap <leader>ve :vsplit $MYVIMRC<cr>` mapping, when I want to edit the .vimrc, in normal mod, can press `-ve` characters.  
+After `nnoremap <leader>ve :vsplit $MYVIMRC<cr>` mapping, when I want to edit
+the .vimrc, in normal mod, can press `-ve` characters.
 
 See all the mappings with `:map`  
 <sub>[⇧ back to top](#contents)</sub>
@@ -542,8 +564,8 @@ call plug#begin()
 " plugins
 call plug#end()
 ```
-Add the plugin you want to install between `call plug#begin()` and `call plug#end()` commands. Most of vim plugins
-host and maintain on Github.
+Add the plugin you want to install between `call plug#begin()` and `call
+plug#end()` commands. Most of vim plugins host and maintain on Github.
 
 For example, to add plugin on the link https://github.com/tpope/vim-sensible, you should put:
 
@@ -563,15 +585,16 @@ and then invoke
 
 `:PlugInstall`
 
-command, that's it! After add the plugin, the usual step is reading its documentation to learn and make some more configuration.
+command, that's it! After add the plugin, the usual step is reading its
+documentation to learn and make some more configuration.
 
 <sub>[⇧ back to top](#contents)</sub>
 #### Creating your own plugin
 `:h write-plugin`:tropical_fish:   
 `:h plugin`:tropical_fish:   
 
-You can write your own plugin! A Vim plugin is a program written in vimscript (VimL) language. Generally consist of
-following parts.
+You can write your own plugin! A Vim plugin is a program written in vimscript
+(VimL) language. Generally consist of following parts.
 
 ```
 MyAwesomePlugin/
@@ -620,14 +643,23 @@ That's all:smiley: Try with `:Greet` on command mode.
 
 <sub>[⇧ back to top](#contents)</sub>
 #### Vim for programmers
-Vim is a great tool for programmers. There are several plugins for autocompletion, refactoring, linting, code-formating and lots of others.
-Writing such plugins are non-trivial job, porting them to other editors is almost impossible. People come up different approaches so far, some of them are pretty successful.
+Vim is a great tool for programmers. There are several plugins for
+autocompletion, refactoring, linting, code-formating and lots of others.
+Writing such plugins are non-trivial job, porting them to other editors is
+almost impossible. People come up different approaches so far, some of them are
+pretty successful.
 
-In 2016 Microsoft developed [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop reinventing the wheel, and regulating such operations. Unless you have a good reason
- to not using it, *LSP* is the way to go for make Vim to gain IDE like features.
-To use it, you need to install *language server* implementation for the language you programming in and add *language client* plugin to Vim.
+In 2016 Microsoft developed [Language Server
+Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop
+reinventing the wheel, and regulating such operations. Unless you have a good
+reason to not using it, *LSP* is the way to go for make Vim to gain IDE like
+features.  To use it, you need to install *language server* implementation for
+the language you programming in and add *language client* plugin to Vim.
 
-I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language server, and [coc.nvim](https://github.com/neoclide/coc.nvim) as a client for programming C++. See the list of language servers and clients lists from [here](https://langserver.org).
+I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language
+server, and [coc.nvim](https://github.com/neoclide/coc.nvim) as a client for
+programming C++. See the list of language servers and clients lists from
+[here](https://langserver.org).
 
 #### An incomplete list of plugins
 
@@ -757,8 +789,9 @@ I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language s
 <sub>[⇧ back to top](#contents)</sub>
 ### Building Vim from source code
 
-If you're using an Unix based operating system, Vi or Vim is probably preinstalled. But You might need some of the 
-features that not enabled by default. To enable them, you might need to build Vim from its source code.
+If you're using an Unix based operating system, Vi or Vim is probably
+preinstalled. But You might need some of the features that not enabled by
+default. To enable them, you might need to build Vim from its source code.
 
 Which features enabled by default is changing by distro, check out with:
 `:version`  
@@ -803,24 +836,28 @@ These are the paramaters I use:
 ```
 which looks like:
 ![version](media/version.png)
-Yours might be different according to your need and be ready to search and install third-party libraries. 
+Yours might be different according to your need and be ready to search and
+install third-party libraries.
 
-2- After this step, the files build system need are generated, with GNU make build tool:  
+2- After this step, the files build system need are generated, with GNU make
+build tool:
 
 `$ make -j 8`  
 
-The '-j' parameter says how many cores we dedicate to the build process. Generally the more cores used, the faster the build process, therefore the less time the build will take.
+The '-j' parameter says how many cores we dedicate to the build
+process. Generally the more cores used, the faster the build process, therefore
+the less time the build will take.
 
-3- At the end of this process, executables will be created. To make them available as command, we need to copy generated binaries and other files.
+3- At the end of this process, executables will be created. To make them
+available as command, we need to copy generated binaries and other files.
 
 `$ make install`  
 
 This will install files to the `prefix` specified on *configure* step.
 
------
+---
 
-- Do you want to add or edit something, is something important missing? Please let me know and I'll fix it or [pull your requests](https://help.github.com/en/articles/creating-a-pull-request)
-- Did you like this document, please leave it a star.
+Thanks for reading.
 
 <sub>[⇧Top](#contents)</sub>
 
