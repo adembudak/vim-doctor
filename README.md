@@ -754,6 +754,7 @@ programming C++. See the list of language servers and clients lists from
 * [dotfiles.github.io](https://dotfiles.github.io)
 * [yet another dotfile manager](https://yadm.io)
 * [r/vim subreddit](https://www.reddit.com/r/vim)
+* [r/vimplugins subreddit](https://www.reddit.com/r/vimplugins)
 * [vim.help](https://vim.help/)
 
 <sub>[⇧ back to top](#contents)</sub>
