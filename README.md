@@ -756,6 +756,7 @@ programming C++. See the list of language servers and clients lists from
 * [r/vim subreddit](https://www.reddit.com/r/vim)
 * [r/vimplugins subreddit](https://www.reddit.com/r/vimplugins)
 * [vim.help](https://vim.help/)
+* [Learn Vim (Smart Way)](https://github.com/iggredible/Learn-Vim)
 
 <sub>[⇧ back to top](#contents)</sub>
 #### books
