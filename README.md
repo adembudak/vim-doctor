@@ -22,6 +22,7 @@
 - [Some frequently used commands](#some-frequently-used-commands)
 - [Configure](#configure)
   * [dotfiles and .vimrc](#dotfiles-and-vimrc)
+    - [Managing dotfiles](#managing-dotfiles)
   * [mapping](#mapping)
     + [leader variable](#leader-variable)
   * [Adding plugin](#adding-plugin)
@@ -489,6 +490,13 @@ you can download from
 and save it either:
 `~/.vimrc` or `~/.vim/vimrc`.
 
+
+##### Managing dotfiles 
+
+- [Using Git bare repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
+- [yadm - yet another dotfiles manager](https://yadm.io/)
+- [GNU Stow](https://www.gnu.org/software/stow/)
+
 <sub>[⇧ back to top](#contents)</sub>
 #### mapping 
 
@@ -774,7 +782,6 @@ programming C++. See the list of language servers and clients lists from
 * [neovim nightly builds](https://github.com/neovim/neovim/releases/tag/nightly)
 * [vimawesome.com](https://www.vimawesome.com) Vim plugins
 * [dotfiles.github.io](https://dotfiles.github.io)
-* [yet another dotfile manager](https://yadm.io)
 * [r/vim subreddit](https://www.reddit.com/r/vim)
 * [r/vimplugins subreddit](https://www.reddit.com/r/vimplugins)
 * [vim.help](https://vim.help/)
