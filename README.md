@@ -7,7 +7,7 @@
 - [Quit the Vim](#quit-the-vim)
 - [What is Vim?](#what-is-vim)
   * [History of Vim](#history-of-vim)
-  * [Vim Forks and Neovim](#vim-forks-and-neovim)
+  * [Forks and Vanillas](#forks-and-vanillas)
 - [Creating a file](#creating-a-file)
 - [Vim modes](#vim-modes)
 - [General](#general)
@@ -74,11 +74,31 @@ enhancements are essential, but it still owes much to its heritage. The
 constraints that guided the design of Vim’s ancestors have endowed us with
 a highly efficient command set that’s still valuable today.
 
-#### Vim Forks and Neovim
+#### Forks and Vanillas
 
-[Neovim](https://neovim.io/) is a fork of Vim and defines itself as an
-extension of Vim with the goal that make easy to contribute. Neovim can be used
-as a drop-in replacement of Vim.
+- [Neovim](https://neovim.io/)
+
+> Neovim is a fork of the venerable text-editor vim, focused on extensibility
+> and usability. It is not a rewrite but a continuation and extension of
+> Vim. Many clones and derivatives exist, some very clever—but none are
+> Vim. Neovim is built for users who want the good parts of Vim, and more. See
+> a list of differences via :help vim-differences. 
+
+- [SpaceVim](https://spacevim.org/) 
+
+> SpaceVim is a community-driven modular Vim distribution. It manages
+> collections of plugins in layers, which help to collect related packages
+> together to provide IDE-like features.
+
+- [Onivim 2](https://www.onivim.io/) 
+
+> Onivim 2 is a reimagination of the Oni editor. Onivim 2 aims to bring the
+> speed of Sublime, the language integration of VSCode, and the modal editing
+> experience of Vim together, in a single package.
+
+Also you might want to take a look at [this
+talk](https://www.youtube.com/watch?v=Pi8qRg_gseQ) on
+[VimConf.live](https://www.vimconf.live/)
 
 ### Creating a file 
 
@@ -454,7 +474,9 @@ interesting story of this trend.
 
 Dotfiles are specially useful when you set up a new machine, it make you avoid
 to configure all the things from beginning. Keeping dotfiles in a version
-control system is a good practice, so you can try new settings, revert back,
+control system is a [good
+practice](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), so
+you can try new settings, revert back,
 host them in a Git server (like Github).
 
  `.bashrc`, `.profile`, `.vimrc` are examples of dotfiles.
