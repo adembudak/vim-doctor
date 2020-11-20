@@ -496,6 +496,7 @@ and save it either:
 - [Using Git bare repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
 - [yadm - yet another dotfiles manager](https://yadm.io/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
+- [Ansible](https://www.ansible.com/use-cases/configuration-management)
 
 <sub>[⇧ back to top](#contents)</sub>
 #### mapping 
