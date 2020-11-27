@@ -497,6 +497,7 @@ and save it either:
 - [Ansible](https://www.ansible.com/use-cases/configuration-management)
 - [homesick](https://github.com/technicalpickles/homesick)
 - [GNU Stow](https://www.gnu.org/software/stow/)
+- [rcm](https://github.com/thoughtbot/rcm)
 - [yadm - yet another dotfiles manager](https://yadm.io/)
 
 <sub>[⇧ back to top](#contents)</sub>
