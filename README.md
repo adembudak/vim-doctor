@@ -469,8 +469,7 @@ dgg     delete from current line to beginning of the file
 On Unix-like operating systems, most of system tools are C programs and some of
 these programs take their arguments written in a file. Dotfiles, files with
 starts with a '.', gives these paramaters and defines program behaviour on
-runtime. You can read from
-[here](https://plus.google.com/101960720994009339267/posts/R58WgWwN9jp)
+runtime. You can read from [here](https://blog.bwasd.io/origin-of-dotfiles/)
 interesting story of this trend.
 
 Dotfiles are specially useful when you set up a new machine, it make you avoid
@@ -785,6 +784,7 @@ programming C++. See the list of language servers and clients lists from
 * [neovim nightly builds](https://github.com/neovim/neovim/releases/tag/nightly)
 * [vimawesome.com](https://www.vimawesome.com) Vim plugins
 * [dotfiles.github.io](https://dotfiles.github.io)
+* [awesome dotfiles](https://github.com/webpro/awesome-dotfiles)
 * [r/vim subreddit](https://www.reddit.com/r/vim)
 * [r/vimplugins subreddit](https://www.reddit.com/r/vimplugins)
 * [vim.help](https://vim.help/)
@@ -824,17 +824,18 @@ programming C++. See the list of language servers and clients lists from
 ### Building Vim from source code
 
 If you're using an Unix based operating system, Vi or Vim is probably
-preinstalled. But You might need some of the features that not enabled by
+preinstalled. But you might need some of the features that not enabled by
 default. To enable them, you might need to build Vim from its source code.
 
-Which features enabled by default is changing by distro, check out with:
+Which features enabled by default is changing by distro, check with:
 `:version`  
 
 Get the vim source from [releases page](https://github.com/vim/vim/releases) or fetch repo with Git:  
 
 `$ git clone --depth=1 https://github.com/vim/vim.git && cd vim`  
 
-1.  *configure* step is the phrase you'll choose which features to enable:  
+1.  *configure* step is the where you'll choose which features to enable, play
+	with it until you get things you want:
 
 `$ ./configure --help`  
 
@@ -870,6 +871,7 @@ These are the paramaters I use:
 ```
 which looks like:
 ![version](media/version.png)
+
 Yours might be different according to your need and be ready to search and
 install third-party libraries.
 
@@ -883,11 +885,11 @@ process. Generally the more cores used, the faster the build process, therefore
 the less time the build will take.
 
 3- At the end of this process, executables will be created. To make them
-available as command, we need to copy generated binaries and other files.
+available as command, we'll need to add generated binaries somewhere available
+by *path*, a usual place for it usually `/usr/local/` but you can change this
+on configure step with `--prefix` parameter;
 
 `$ make install`  
-
-This will install files to the `prefix` specified on *configure* step.
 
 ---
 
