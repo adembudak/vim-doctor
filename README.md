@@ -16,7 +16,7 @@
 - [Working more than one file](#working-more-than-one-file)
   * [using tab pages](#using-tab-pages)
 - [Repeating commands without repeating yourself](#repeating-commands-without-repeating-yourself)
-  * [repating more than one command by recording](#repating-more-than-one-command-by-recording)
+  * [repeating more than one command by recording](#repeating-more-than-one-command-by-recording)
 - [Editing](#editing)
   * [find and change](#find-and-change)
 - [Some frequently used commands](#some-frequently-used-commands)
@@ -134,7 +134,7 @@ Visual-mode`:tropical_fish:
 $ vimtutor          Official tutorial of Vim
 
 :h user-manual
-:h help-summary     On usage of build-in documantation
+:h help-summary     On usage of build-in documentation
 :h subject          help about the *subject*. Ex: `:h python` (C-] to click hyperlinks, C-T to back)
 
 :q                  quit
@@ -226,17 +226,17 @@ zz       like above but leave the cursor in the same column
 w        jump beginning of next word (punctuation considered as a word)
 e        jump end of the word
 ge       jump end of the previous word
-b        jump begining of the previous word
+b        jump beginning of the previous word
 ^        jump to first non space character on line
 gg       top of the file
 G        bottom of the file
-+        begining of the next line
++        beginning of the next line
 -        beginning of the previous line
 ```
 ``` 
-W        jump beginning of the next word (punctuation not considered words)        v           v 
-E        jump end of the next word (punctuation not considerd as words) Ex:  e (abcd)   E (abcd)
-B        jump begining of the previous word
+W        jump beginning of the next word (punctuation not considered words)         v           v 
+E        jump end of the next word (punctuation not considered as words) Ex:  e (abcd)   E (abcd)
+B        jump beginning of the previous word
 #G       go to line number #  Ex: 38G
 #gg      same as #G
 ```
@@ -334,9 +334,9 @@ C-wL       move current window to the far right
 ```
 
 ```
-$vim --help               for list Vim paramaters `h vim-arguments`:tropical_fish:
+$vim --help               for list Vim parameters `h vim-arguments`:tropical_fish:
 
-$ vim -O2 f1.txt f2.txt   open Vim with `-O[N]` paramater, vertically splitted f1.txt and f.txt 
+$ vim -O2 f1.txt f2.txt   open Vim with `-O[N]` parameter, vertically splitted f1.txt and f.txt 
 $ vim -o2 f1.txt f2.txt   like above but horizontally splitted
 $ vim -P2 f1.txt f2.txt   like above but on tab pages
 
@@ -377,12 +377,12 @@ $ vim f1.txt f2.txt       open the files but show only one at a time (navigate w
 ```
 c3w      or 3cw, cw cw cw
 4j       jjjj 
-2w       w w,  go to the begining of 2 next words
+2w       w w,  go to the beginning of 2 next words
 2dd      delete 2 lines
 ```
 
 <sub>[⇧ back to top](#contents)</sub>
-#### repating more than one command by recording
+#### repeating more than one command by recording
 
 `:h recording`:tropical_fish:  
 
@@ -410,7 +410,7 @@ d^       delete from first non-whitespace character to end of line (inclusively)
 d$       delete till end of the line
 D        same as above
 dd       delete all line
-dib      delete content inside the paranthesis
+dib      delete content inside the parenthesis
 ```
 
 ```
@@ -421,7 +421,7 @@ r<c>     change the character under the cursor to <c>
 *        find next word under cursor
 f<c>     find character <c> from current cursor position inside the line
 '.       jump to last edited line
-g;       jump back to last editted position
+g;       jump back to last edited position
 ```
 ```
 :ab sth something         in insert mode, when written 'sth'<space> change it with 'something' 
@@ -454,7 +454,7 @@ yyp     copy line and paste to below
 yyP     copy line and paste to above
 ddp     swap current line with the below
 ea      add end of the word
-xp      exchange two chacter  Ex: sometihng -> something
+xp      exchange two character  Ex: sometihng -> something
 dgg     delete from current line to beginning of the file
 ```
 <sub>[⇧ back to top](#contents)</sub>
@@ -468,7 +468,7 @@ dgg     delete from current line to beginning of the file
 
 On Unix-like operating systems, most of system tools are C programs and some of
 these programs take their arguments written in a file. Dotfiles, files with
-starts with a '.', gives these paramaters and defines program behaviour on
+starts with a '.', gives these parameters and defines program behavior on
 runtime. You can read from [here](https://blog.bwasd.io/origin-of-dotfiles/)
 interesting story of this trend.
 
@@ -503,13 +503,13 @@ and save it either:
 #### mapping 
 
 `:h mapping`:tropical_fish:  
-we are shortcuts in Vim terminology.
+Mapping is creating shortcuts in Vim terminology.
 
-General formula:
+To map from *longCommands* to a *shortcut*, you use following formula:
 
-> map shortcut longCommands
+> :map shortcut longCommands
 
-we need to add mappings to .vimrc make them permanent.
+Mappings are needed to save on .vimrc to be permanent.
 
  there are 3 basic mappings for three modes:
 
@@ -519,8 +519,10 @@ we need to add mappings to .vimrc make them permanent.
 
 ```
 nmap m <C-d>        "in normal mode: when typed m, ctrl-d (half page below) will be executed
-imap jk <ESC>       "in inesert mode, when typed jk, pass to normal modee
+imap jk <ESC>       "in insert mode, when typed jk, pass to normal mode
 ```
+To check whether your mapping conflict other mappings: `:verbose map shortcut`
+
 Some special characters:
 `:h key-notation`:tropical_fish:   
 
@@ -538,9 +540,8 @@ Some special characters:
 | `<Del>` | Delete
 | `<S-p>` | Shift + p |
 
-To check whether your mapping conflict other mappings: `:verbose map shortcut`
 
-It's a good paractices to define mappings as non-recursive. To make no-recursing mapping we add *nore*  
+Defining mappings as *no*n-*re*cursive is a good practice:
 
 - for normal mode **nnoremap**
 - for insert mode **inoremap**
@@ -584,7 +585,7 @@ The easiest way to adding plugin to Vim is make use of a plugin manager. There a
 
 vim-plug is a plugin manager for Vim and allows add, update, remove plugins.
 
-run the follong command:
+run the following command:
 ```bash
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -632,7 +633,7 @@ You can write your own plugin! A Vim plugin is a program written in vimscript
 MyAwesomePlugin/
 .
 ├── autoload   Autoloaded functions according to filetype
-├── doc        Documantation file
+├── doc        Documentation file
 ├── ftdetect   File type detection
 ├── ftplugin   Plugin for a particular file type
 ├── plugin     Plugin file
@@ -676,7 +677,7 @@ That's all:smiley: Try with `:Greet` on command mode.
 <sub>[⇧ back to top](#contents)</sub>
 #### Vim for programmers
 Vim is a great tool for programmers. There are several plugins for
-autocompletion, refactoring, linting, code-formating and lots of others.
+autocompletion, refactoring, linting, code-formatting and lots of others.
 Writing such plugins are non-trivial job, porting them to other editors is
 almost impossible. People come up different approaches so far, some of them are
 pretty successful.
@@ -769,7 +770,7 @@ programming C++. See the list of language servers and clients lists from
 * [lite-dfm](https://github.com/bilalq/lite-dfm)
 * [goyo.vim](https://github.com/junegunn/goyo.vim) focus on content
 * [limelight.vim](https://github.com/junegunn/limelight.vim) partially highlight 
-* [command-t](https://github.com/wincent/command-t) fast nagivating 
+* [command-t](https://github.com/wincent/command-t) fast navigating 
 
 <sub>[⇧ back to top](#contents)</sub>
 
@@ -839,7 +840,7 @@ Get the vim source from [releases page](https://github.com/vim/vim/releases) or 
 
 `$ ./configure --help`  
 
-These are the paramaters I use:
+These are the parameters I use:
 ```
 ./configure --prefix=/home/adem/.config/vim
 --enable-fail-if-missing  \
@@ -897,7 +898,7 @@ Thanks for reading.
 
 <sub>[⇧Top](#contents)</sub>
 
-### Licence 
+### License
 
 <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
