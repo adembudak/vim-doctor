@@ -112,7 +112,20 @@ $ vim directory/filename
 
 ### Vim modes
 
-Vim provides different modes to users for focus on content.
+Vim is a modal editor. It has different modes for different activities when
+editing text. In a non-modal editor, when you want to go from point *A* to *B*, you
+either move the cursor one by one or use your mouse. Vim provides a fast track
+to reach begin or end of a file/paragraph/line/word, called *normal mode*. When you reach
+the point you want to edit, you change to *insert mode*.
+
+These are all happen by using keyboard shortcuts. That's the reason Vim has
+a reputation using computer when your hands on keyboard. Memorizing shortcuts for
+every move can be seem burdensome at first but most of them are just one or
+two letters... and once you get along with it, they stick your fingertips.
+
+From Vim perspective, other editors always on insert mode.
+
+There are 5 basic modes:
 
 * normal mode: vim starts with this mode. Esc is used for enter this mode. `:h
   Normal-mode`:tropical_fish:
@@ -135,7 +148,7 @@ $ vimtutor          Official tutorial of Vim
 
 :h user-manual
 :h help-summary     On usage of build-in documentation
-:h subject          help about the *subject*. Ex: `:h python` (C-] to click hyperlinks, C-T to back)
+:h subject          help about the *subject*. Ex: `:h python` (C-] to click hyperlinks, C-O to back)
 
 :q                  quit
 :w                  write
