@@ -1,6 +1,6 @@
 <p align="center"><img width="100" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="Vim logo"></p>
 
- <p align="center"> Yet another quick reference for Vim text editor </p>
+ <p align="center"> A quick reference for Vim text editor </p>
 		 
 <div id="contents"></div>
 
@@ -689,23 +689,23 @@ That's all:smiley: Try with `:Greet` on command mode.
 
 <sub>[⇧ back to top](#contents)</sub>
 #### Vim for programmers
-Vim is a great tool for programmers. There are several plugins for
-autocompletion, refactoring, linting, code-formatting and lots of others.
-Writing such plugins are non-trivial job, porting them to other editors is
-almost impossible. People come up different approaches so far, some of them are
-pretty successful.
 
-In 2016 Microsoft developed [Language Server
-Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop
+Vim is a great tool for programmers. It's easy to install, fast to startup, 
+has very small executable size and available almost everywhere. It's basically 
+a C program run on the terminal.
+
+There are endless number of plugins for autocompletion, refactoring, linting,
+code-formatting and lots of others. Writing such plugins are non-trivial job,
+porting them to other editors is almost impossible. People come up different
+approaches so far, some of them are pretty successful.
+
+[Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) to stop
 reinventing the wheel, and regulating such operations. Unless you have a good
 reason to not using it, *LSP* is the way to go for make Vim to gain IDE like
-features.  To use it, you need to install *language server* implementation for
+features. You'll need to install *language server* implementation for
 the language you programming in and add *language client* plugin to Vim.
 
-I use [clangd](https://clang.llvm.org/extra/clangd/Installation.html) language
-server, and [coc.nvim](https://github.com/neoclide/coc.nvim) as a client for
-programming C++. See the list of language servers and clients lists from
-[here](https://langserver.org).
+A list of language servers and clients can be seen from [here](https://langserver.org).
 
 #### An incomplete list of plugins
 
@@ -724,7 +724,6 @@ programming C++. See the list of language servers and clients lists from
 * [VimCompletesMe](https://github.com/ajh17/VimCompletesMe)
 * [completor.vim](https://github.com/maralla/completor.vim)
 * [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete)
-
 
 <sub>[⇧ back to top](#contents)</sub>
 ###### List of language servers 
