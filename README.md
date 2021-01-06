@@ -691,8 +691,7 @@ That's all:smiley: Try with `:Greet` on command mode.
 #### Vim for programmers
 
 Vim is a great tool for programmers. It's easy to install, fast to startup, 
-has very small executable size and available almost everywhere. It's basically 
-a C program run on the terminal.
+has very small executable size and available almost everywhere.
 
 There are endless number of plugins for autocompletion, refactoring, linting,
 code-formatting and lots of others. Writing such plugins are non-trivial job,
@@ -708,6 +707,8 @@ the language you programming in and add *language client* plugin to Vim.
 A list of language servers and clients can be seen from [here](https://langserver.org).
 
 #### An incomplete list of plugins
+There is an incomplete list of Vim plugins below. It's probably missing some
+awesome plugins. A small search on web will be more useful useful :smiley:
 
 ###### For newcomers
 * [vim-sensible](https://github.com/tpope/vim-sensible)
@@ -751,12 +752,15 @@ A list of language servers and clients can be seen from [here](https://langserve
 
 <sub>[⇧ back to top](#contents)</sub>
 ###### GUI-like
+* netrc `:h netrw`:tropical_fish:
+* [fern.vim](https://github.com/lambdalisue/fern.vim)
+* [lightline](https://github.com/itchyny/lightline.vim)
 * [NERDTree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [promptline](https://github.com/edkolev/promptline.vim)
-* [vim-airline](https://github.com/vim-airline/vim-airline)
 * [powerline](https://github.com/powerline/powerline)
-* [lightline](https://github.com/itchyny/lightline.vim)
+* [ranger.vim](https://github.com/francoiscabrol/ranger.vim)
+* [vim-airline](https://github.com/vim-airline/vim-airline)
 
 <sub>[⇧ back to top](#contents)</sub>
 ###### Theme and colors
@@ -834,6 +838,7 @@ A list of language servers and clients can be seen from [here](https://langserve
 * [Editors: Vim (./missing semester by M.I.T)](https://missing.csail.mit.edu/2020/editors/)
 
 <sub>[⇧ back to top](#contents)</sub>
+
 ### Building Vim from source code
 
 If you're using an Unix based operating system, Vi or Vim is probably
@@ -847,62 +852,18 @@ Get the vim source from [releases page](https://github.com/vim/vim/releases) or 
 
 `$ git clone --depth=1 https://github.com/vim/vim.git && cd vim`  
 
-1.  *configure* step is the where you'll choose which features to enable, play
-	with it until you get things you want:
-
-`$ ./configure --help`  
-
-These are the parameters I use:
+Stick with the default and you'll be fine:
+```bash
+./configure
+make
+make install
 ```
-./configure --prefix=/home/adem/.config/vim
---enable-fail-if-missing  \
---disable-darwin \
---disable-smack \
---disable-selinux \ 
---enable-pythoninterp=yes \
---with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \
---enable-python3interp=yes \
---with-python3-config-dir=/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu/ \
---enable-cscope \
---disable-netbeans \
---enable-terminal \
---enable-autoservername \
---enable-multibyte \
---disable-rightleft \
---disable-arabic \
---enable-fontset \
---enable-gui=no \
---enable-gtk2-check=no \
---enable-gtk3-check=no \
---enable-athena-check=no \
---enable-motif-check=no \
---enable-nextaw-check=no \
---enable-carbon-check=no \
---disable-gtktest \
---enable-nextaw-check=no \
---with-compiledby=p1v0t
-```
-which looks like:
+
+if you however, want to enable things like *Scheme* interpreter, *Ruby*, *Perl* or *Lua*
+support, you'll need to play a little bit on configure step, see: `./configure --help`.
+
+which looks like below:
 ![version](media/version.png)
-
-Yours might be different according to your need and be ready to search and
-install third-party libraries.
-
-2- After this step, the files build system need are generated, with GNU make
-build tool:
-
-`$ make -j 8`  
-
-The '-j' parameter says how many cores we dedicate to the build
-process. Generally the more cores used, the faster the build process, therefore
-the less time the build will take.
-
-3- At the end of this process, executables will be created. To make them
-available as command, we'll need to add generated binaries somewhere available
-by *path*, a usual place for it usually `/usr/local/` but you can change this
-on configure step with `--prefix` parameter;
-
-`$ make install`  
 
 ---
 
@@ -911,7 +872,8 @@ Thanks for reading.
 <sub>[⇧Top](#contents)</sub>
 
 ### License
-
+ 
 <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
        width="80" height="15" alt="WTFPL" /></a>
+
