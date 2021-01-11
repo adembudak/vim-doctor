@@ -752,8 +752,9 @@ awesome plugins. A small search on web will be more useful useful :smiley:
 
 <sub>[⇧ back to top](#contents)</sub>
 ###### GUI-like
-* netrc `:h netrw`:tropical_fish:
+* netrw `:h netrw`:tropical_fish:
 * [fern.vim](https://github.com/lambdalisue/fern.vim)
+* [vimfiler.vim](https://github.com/Shougo/vimfiler.vim)
 * [lightline](https://github.com/itchyny/lightline.vim)
 * [NERDTree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
@@ -873,7 +874,5 @@ Thanks for reading.
 
 ### License
  
-<a href="http://www.wtfpl.net/"><img
-       src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
-       width="80" height="15" alt="WTFPL" /></a>
+[![License: MIT](https://img.shields.io/badge/license-MIT-%23373737)](https://opensource.org/licenses/MIT)
 
